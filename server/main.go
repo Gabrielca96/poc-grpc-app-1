@@ -18,7 +18,7 @@ type server struct {
 
 func (s *server) Greet(req *proto.GreetRequest, stream proto.GreetService_GreetServer) error {
 	for i := 1; i <= 3; i++ {
-		msg := fmt.Sprintf("Hola %s! Respuesta %d", req.Name, i)
+		msg := fmt.Sprintf("Holas %s! Respuesta %d", req.Name, i)
 		if err := stream.Send(&proto.GreetResponse{Message: msg}); err != nil {
 			return err
 		}
