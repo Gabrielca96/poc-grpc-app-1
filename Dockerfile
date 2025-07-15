@@ -22,7 +22,7 @@ WORKDIR /app
 COPY --from=builder /app/server_bin .
 
 # Expone el puerto gRPC
-EXPOSE 50052
+EXPOSE 50051
 
 # Comando para ejecutar el servidor
 CMD ["./server_bin"]
